@@ -22,6 +22,43 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
+
+    <dependencies>
+
+
+        <!--service层依赖dao层次-->
+        <dependency>
+            <artifactId>edu-dao</artifactId>
+            <groupId>com.yuxiu.edu</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--添加spring依赖-->
+        <!--beans-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--context-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--tx-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+
+
+    </dependencies>
+
    
 
     <build>
