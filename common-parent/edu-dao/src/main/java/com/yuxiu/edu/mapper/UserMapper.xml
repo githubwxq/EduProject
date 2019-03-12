@@ -7,5 +7,9 @@
         SELECT * FROM t_user WHERE id = #{id}
     </select>
 
+    <insert id="insert"  parameterType="com.yuxiu.edu.model.User">
+       insert into t_user (id, username,password) values(#{id}, #{username}, #{password})
+    </insert>
+
 
 </mapper>

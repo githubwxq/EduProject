@@ -32,7 +32,7 @@ public class UserServiceImpl  extends BaseServiceImpl<User> implements IUserServ
 
     @Override
     public void insert(User user) {
-
+         userMapper.insert(user);
     }
 
     @Override
