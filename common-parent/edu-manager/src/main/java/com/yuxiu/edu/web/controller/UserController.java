@@ -5,6 +5,7 @@ import com.yuxiu.edu.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
@@ -42,4 +43,25 @@ public class UserController {
     public String edit(){
         return "user/edit";
     }
+
+
+//         插入数据测试
+    @RequestMapping("insert")
+    @ResponseBody
+    public String insert() {
+        System.out.println("11111");
+        User user=new User();
+        user.setId(2);
+        user.setUsername("qwer");
+        user.setPassword("123123");
+        System.out.println(user.getUsername()+"");
+        userService.insert(user);
+        return user.getPassword();
+    }
+
+
+
+
+
+
 }
